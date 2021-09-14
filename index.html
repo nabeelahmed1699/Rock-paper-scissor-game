@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSs -->
+    <link rel="stylesheet" href="style.css">
+    <title>Rock paper scissor</title>
+</head>
+
+<body>
+    <a href="https://github.com/nabeelahmed1699/Calculator-App" class='git-btn'>Visit on Github</a>
+    <h1 class="title center">Rock Paper Scissors</h1>
+
+    <h2 class="subtitle center">Choose one</h2>
+
+    <div class="cards-container flex">
+        <!--====================== Players card ======================== -->
+        <div class="player-container flex">
+            <div class="card rock player" data-player-card="rock">
+                <img src="./images/noun_Fist_477914.svg" alt="Rock">
+                <h3>Rock</h3>
+            </div>
+            <div class="card paper player" data-player-card="paper">
+                <img src="./images/noun_wave_477912.svg" alt="paper">
+                <h3>Paper</h3>
+            </div>
+            <div class="card scissor player" data-player-card="scissor">
+                <img src="./images/noun_Scissors_477919.svg" alt="scissor">
+                <h3>Scissor</h3>
+            </div>
+        </div>
+        <h2 class="subtitle">+</h2>
+        <!--====================== computer card ======================== -->
+        <div class="computer-container flex">
+            <div class="card computer" data-computer-card="rock">
+                <div class="card-content">
+                    <div class="front">
+                        will flip
+                    </div>
+                    <div class="back rock">
+                        <img src="./images/noun_Fist_477914.svg" alt="Rock">
+                        <h3>Rock</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card computer" data-computer-card="paper">
+                <div class="card-content">
+                    <div class="front">
+                        will flip
+                    </div>
+                    <div class="back paper">
+                        <img src="./images/noun_wave_477912.svg" alt="paper">
+                        <h3>Paper</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card computer" data-computer-card="scissor">
+                <div class="card-content">
+                    <div class="front">
+                        will flip
+                    </div>
+                    <div class="back scissor">
+                        <img src="./images/noun_Scissors_477919.svg" alt="scissor">
+                        <h3>Scissor</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <h3 class="result"></h3>
+        <h3 class="score"></h3>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --background-color: #0a192f;
+    --body-text-color: #63edd0;
+    --text-color: #e4e7e8;
+    --text-color-alt: #bbc3c9;
+    --second-color: #b6b1c7;
+    --paper-color: hsl(261, 89%, 49%);
+    --paper-color-light: hsl(261, 89%, 59%);
+    --scissor-color: hsl(120, 89%, 49%);
+    --scissor-color-light: hsl(120, 89%, 59%);
+    --rock-color: hsl(0, 89%, 49%);
+    --rock-color-light: hsl(0, 89%, 59%);
+    /* Typography */
+    --font-family: 'Roboto', sans-serif;
+    --biggest-font-size: 5rem;
+    --biger-font-size: 3.5rem;
+    --big-font-size: 2.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.15rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+    --text-line-height: 2rem;
+}
+
+@media (max-width: 860px) {
+    :root {
+        --biggest-font-size: 3rem;
+        --biger-font-size: 2.5rem;
+        --big-font-size: 1.5rem;
+        --h2-font-size: 1rem;
+        --h3-font-size: 0.75rem;
+        --normal-font-size: 0.538rem;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 7.5rem;
+        --biger-font-size: 4.5rem;
+        --big-font-size: 4rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+html {
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--body-text-color);
+}
+
+.title {
+    font-size: var(--biger-font-size);
+    margin-top: 5rem;
+}
+
+.icon-img {
+    width: 120px;
+}
+
+.subtitle {
+    font-size: var(--big-font-size);
+}
+
+.cards-container {
+    width: 70%;
+    max-width: 700px;
+    min-width: 350px;
+    margin: 2rem auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 860px) {
+    .cards-container {
+        flex-direction: column;
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.card+.card {
+    margin-left: 20px;
+}
+
+.rock {
+    padding: 1.2rem;
+    background: var(--rock-color-light);
+}
+
+.rock:hover {
+    background: var(--rock-color);
+}
+
+.paper {
+    padding: 1.2rem;
+    background: var(--paper-color-light);
+}
+
+.paper:hover {
+    background: var(--paper-color);
+}
+
+.scissor {
+    padding: 1.2rem;
+    background: var(--scissor-color-light);
+    color: var(--text-color);
+}
+
+.scissor:hover {
+    background: var(--scissor-color);
+}
+
+.rotate {
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+}
+
+.computer-card:hover .card-content {
+    transform: rotateY(180deg);
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 50%;
+    background-color: #b6b1c7;
+    color: var(--text-color);
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.git-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-4px, 3.2px);
+    padding: 8px 20px;
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.5);
+    border: 0;
+    background: var(--body-text-color);
+    color: var(--background-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.git-btn:hover {
+    background: var(--background-color);
+    color: var(--body-text-color);
+}
