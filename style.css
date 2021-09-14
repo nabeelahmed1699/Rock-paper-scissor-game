@@ -82,6 +82,7 @@ body {
 }
 
 .title {
+    text-align: center;
     font-size: var(--biger-font-size);
     margin-top: 5rem;
 }
@@ -127,7 +128,8 @@ body {
     background: var(--rock-color-light);
 }
 
-.rock:hover {
+.rock:hover,
+.rock:focus {
     background: var(--rock-color);
 }
 
@@ -136,7 +138,8 @@ body {
     background: var(--paper-color-light);
 }
 
-.paper:hover {
+.paper:hover,
+.paper:focus {
     background: var(--paper-color);
 }
 
@@ -146,7 +149,8 @@ body {
     color: var(--text-color);
 }
 
-.scissor:hover {
+.scissor:hover,
+.scissor:focus {
     background: var(--scissor-color);
 }
 
