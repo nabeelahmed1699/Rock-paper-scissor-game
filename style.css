@@ -84,6 +84,7 @@ body {
 .title {
     text-align: center;
     font-size: var(--biger-font-size);
+    margin: 0 2rem;
     margin-top: 5rem;
 }
 
